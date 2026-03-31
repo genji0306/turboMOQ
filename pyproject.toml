@@ -1,7 +1,7 @@
 [project]
-name = "turboquant"
-version = "0.1.0"
-description = "TurboQuant: KV cache compression via PolarQuant + QJL (ICLR 2026)"
+name = "turbomoq"
+version = "0.2.0"
+description = "TurboMOQ: Hybrid KV cache compression — TurboQuant rotation + MOQ topology-aware allocation"
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.24",
@@ -18,7 +18,7 @@ bench = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["turboquant*"]
+include = ["turboquant*", "turbomoq*"]
 
 [build-system]
 requires = ["setuptools>=68"]
