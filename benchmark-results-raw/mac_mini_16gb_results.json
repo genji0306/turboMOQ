@@ -1,0 +1,138 @@
+{
+  "system": {
+    "python": "3.13.12 (main, Feb  3 2026, 17:53:27) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "ram_gb": 17.2
+  },
+  "mlx": {
+    "dim": 128,
+    "seq_len": 1024,
+    "iterations": 50,
+    "numpy_rotate_ms": 0.03,
+    "numpy_codebook_ms": 0.994,
+    "mlx_rotate_ms": 9.3,
+    "rotation_speedup": 0.0,
+    "mlx_codebook_ms": 35.522,
+    "codebook_speedup": 0.03,
+    "mlx_quantize_ms": 5.909,
+    "rotation_agreement_cosine": 1.0
+  },
+  "attention_demotion": {
+    "n_tokens": 10000,
+    "n_steps": 100,
+    "register_ms": 6.0,
+    "update_ms_per_step": 1.24,
+    "assign_ms": 6.48,
+    "tier_distribution": {
+      "archive": 1000,
+      "low": 3000,
+      "medium": 4000,
+      "high": 1500,
+      "critical": 500
+    },
+    "avg_bits": 3.8,
+    "compression_ratio": 4.21
+  },
+  "qjl": {
+    "head_dim": 128,
+    "seq_len": 512,
+    "2bit_jl32": {
+      "base_cosine": 0.8935,
+      "corrected_cosine": 0.7178,
+      "improvement": -0.1756,
+      "overhead_bits_per_dim": 0.5,
+      "encode_decode_ms": 3.7
+    },
+    "2bit_jl64": {
+      "base_cosine": 0.8935,
+      "corrected_cosine": 0.8222,
+      "improvement": -0.0712,
+      "overhead_bits_per_dim": 0.75,
+      "encode_decode_ms": 7.53
+    },
+    "2bit_jl96": {
+      "base_cosine": 0.8935,
+      "corrected_cosine": 0.8695,
+      "improvement": -0.024,
+      "overhead_bits_per_dim": 1.0,
+      "encode_decode_ms": 11.14
+    },
+    "2bit_jl128": {
+      "base_cosine": 0.8935,
+      "corrected_cosine": 0.8943,
+      "improvement": 0.0008,
+      "overhead_bits_per_dim": 1.25,
+      "encode_decode_ms": 14.69
+    },
+    "1bit_jl32": {
+      "base_cosine": 0.7962,
+      "corrected_cosine": 0.6052,
+      "improvement": -0.191,
+      "overhead_bits_per_dim": 0.5,
+      "encode_decode_ms": 3.87
+    },
+    "1bit_jl64": {
+      "base_cosine": 0.7962,
+      "corrected_cosine": 0.7274,
+      "improvement": -0.0688,
+      "overhead_bits_per_dim": 0.75,
+      "encode_decode_ms": 7.49
+    },
+    "1bit_jl96": {
+      "base_cosine": 0.7962,
+      "corrected_cosine": 0.7908,
+      "improvement": -0.0054,
+      "overhead_bits_per_dim": 1.0,
+      "encode_decode_ms": 11.06
+    },
+    "1bit_jl128": {
+      "base_cosine": 0.7962,
+      "corrected_cosine": 0.8269,
+      "improvement": 0.0307,
+      "overhead_bits_per_dim": 1.25,
+      "encode_decode_ms": 15.55
+    },
+    "mlx_encode_decode_ms": 41.23
+  },
+  "c_extension": {
+    "n_layers": 32,
+    "n_heads": 8,
+    "head_dim": 128,
+    "python_score_ms": 0.314,
+    "python_quantize_ms": 0.014,
+    "c_score_ms": 0.143,
+    "score_speedup": 2.2,
+    "c_quantize_ms": 0.015,
+    "quantize_speedup": 0.98,
+    "allocation_range": "3-8",
+    "avg_allocated_bits": 3.9
+  },
+  "full_pipeline": {
+    "4bit": {
+      "compress_ms": 252.0,
+      "decompress_ms": 16.0,
+      "compression_ratio": 4.09,
+      "key_cosine": 0.9754,
+      "value_cosine": 0.9843,
+      "memory_mb": 8.21
+    },
+    "3bit": {
+      "compress_ms": 266.7,
+      "decompress_ms": 28.4,
+      "compression_ratio": 5.43,
+      "key_cosine": 0.8753,
+      "value_cosine": 0.9661,
+      "memory_mb": 6.18
+    },
+    "2bit": {
+      "compress_ms": 175.0,
+      "decompress_ms": 37.0,
+      "compression_ratio": 8.09,
+      "key_cosine": 0.6012,
+      "value_cosine": 0.9271,
+      "memory_mb": 4.15
+    }
+  }
+}
