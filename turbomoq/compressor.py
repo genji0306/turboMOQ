@@ -245,7 +245,7 @@ class TurboMOQCompressor:
 def _symmetric_quantize(data: np.ndarray, bits: int) -> tuple[np.ndarray, np.ndarray]:
     """Per-channel symmetric quantization."""
     qmax = (1 << bits) - 1
-    half = qmax // 2
+    half = max(1, qmax // 2)
 
     if data.ndim == 1:
         abs_max = np.abs(data).max()

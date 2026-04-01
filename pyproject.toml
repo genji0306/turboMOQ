@@ -1,7 +1,7 @@
 [project]
 name = "turbomoq"
-version = "0.2.0"
-description = "TurboMOQ: Hybrid KV cache compression — TurboQuant rotation + MOQ topology-aware allocation"
+version = "0.3.0"
+description = "TurboMOQ: Hybrid KV cache compression — TurboQuant rotation + MOQ topology-aware allocation + MLX Metal acceleration"
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.24",
@@ -9,11 +9,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+mlx = [
+    "mlx>=0.18.0",
+]
 dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
 ]
 bench = [
+    "matplotlib",
+]
+all = [
+    "mlx>=0.18.0",
     "matplotlib",
 ]
 
